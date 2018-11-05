@@ -19,7 +19,7 @@ var schemas = []string{
 		updated_at timestamp DEFAULT CURRENT_TIMESTAMP,
 		index index_url_name(url_name),
 		index index_created_at(created_at desc)
-	)
+	)  ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 	`,
 }
 var globalDB *sqlx.DB
